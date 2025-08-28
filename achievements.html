@@ -6,65 +6,70 @@
   <title>Achievements - Iskandarov's Blog</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="particles-canvas"></canvas>
+
   <header class="navbar">
     <div class="container nav-content">
-      <div class="brand">Iskandarov's Blog</div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#blog">Blog</a>
-        <a href="achievements.html" class="active">Achievements</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
+      <div class="brand neon">Iskandarov's Blog</div>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#blog">Blog</a>
+          <a href="achievements.html" class="active">Achievements</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="hamburger" aria-label="Toggle menu"><span></span></button>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="page-header">
-      <h1>Achievements</h1>
+      <h1 class="neon">Achievements</h1>
       <p class="tagline">Milestones, certifications, and highlights from my journey.</p>
     </section>
 
     <section class="achievements-grid">
-      <article class="card achievement">
+      <article class="card achievement fade-up" data-animate="fade-up">
         <img src="https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1200&auto=format&fit=crop" alt="Award trophy" />
         <div class="card-body">
           <h3>Top Performer Award 2024</h3>
           <p>Recognized for outstanding contributions to project delivery and team leadership.</p>
         </div>
       </article>
-      <article class="card achievement">
+      <article class="card achievement fade-up" data-animate="fade-up">
         <img src="https://images.unsplash.com/photo-1559136653-1eaaf6f0c4a9?q=80&w=1200&auto=format&fit=crop" alt="Certification" />
         <div class="card-body">
           <h3>AWS Certified Solutions Architect</h3>
           <p>Validated expertise in designing and deploying scalable systems on AWS.</p>
         </div>
       </article>
-      <article class="card achievement">
+      <article class="card achievement fade-up" data-animate="fade-up">
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Speaking at conference" />
         <div class="card-body">
           <h3>Conference Speaker</h3>
           <p>Delivered a talk on modern frontend architecture and performance optimization.</p>
         </div>
       </article>
-      <article class="card achievement">
+      <article class="card achievement fade-up" data-animate="fade-up">
         <img src="https://images.unsplash.com/photo-1517503632222-dfea49ffd0b4?q=80&w=1200&auto=format&fit=crop" alt="Open source" />
         <div class="card-body">
           <h3>Open Source Contributor</h3>
           <p>Contributed features and fixes to widely used developer tools and libraries.</p>
         </div>
       </article>
-      <article class="card achievement">
+      <article class="card achievement fade-up" data-animate="fade-up">
         <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1200&auto=format&fit=crop" alt="Mentoring" />
         <div class="card-body">
           <h3>Mentorship Program</h3>
           <p>Guided junior developers through structured learning paths and code reviews.</p>
         </div>
       </article>
-      <article class="card achievement">
+      <article class="card achievement fade-up" data-animate="fade-up">
         <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop" alt="Publication" />
         <div class="card-body">
           <h3>Technical Publication</h3>
