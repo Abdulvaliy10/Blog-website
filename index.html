@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iskandarov's Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">Iskandarov's Blog</div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <h1>Welcome to Iskandarov's Blog</h1>
+      <p class="tagline">Thoughts, tutorials, and stories on web development and beyond.</p>
+      <a class="btn primary" href="https://t.me/" target="_blank" rel="noopener">Join Telegram</a>
+    </section>
+
+    <section class="content-grid" id="blog">
+      <div class="posts">
+        <article class="card post">
+          <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1200&auto=format&fit=crop" alt="Code on a screen" />
+          <div class="card-body">
+            <h3>Getting Started with JavaScript</h3>
+            <p>Learn the fundamentals of JavaScript and build your first interactive webpage.</p>
+          </div>
+        </article>
+        <article class="card post">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="Laptop and coffee" />
+          <div class="card-body">
+            <h3>CSS Grid vs Flexbox</h3>
+            <p>Understand when to use Grid and Flexbox with practical examples and tips.</p>
+          </div>
+        </article>
+        <article class="card post">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Teamwork brainstorming" />
+          <div class="card-body">
+            <h3>Productivity Hacks for Developers</h3>
+            <p>Boost your productivity with proven techniques and tools tailored for coders.</p>
+          </div>
+        </article>
+        <article class="card post">
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1200&auto=format&fit=crop" alt="Server racks" />
+          <div class="card-body">
+            <h3>Deploying Your First App</h3>
+            <p>A step-by-step guide to deploy your web app with confidence.</p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <section class="card about">
+          <h3>About Me</h3>
+          <p>Hi, I'm Iskandarov. I write about web development, cloud, and tech careers.</p>
+        </section>
+
+        <section class="card popular">
+          <h3>Popular Posts</h3>
+          <ul>
+            <li><a href="#">10 VS Code Extensions I Can't Live Without</a></li>
+            <li><a href="#">How to Learn React in 2025</a></li>
+            <li><a href="#">Understanding Async/Await</a></li>
+          </ul>
+        </section>
+
+        <section class="card categories">
+          <h3>Categories</h3>
+          <div class="chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">CSS</span>
+            <span class="chip">React</span>
+            <span class="chip">Cloud</span>
+            <span class="chip">Career</span>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p>© 2025 Iskandarov</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

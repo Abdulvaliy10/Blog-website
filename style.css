@@ -1,0 +1,179 @@
+/* Global Styles */
+:root {
+  --sky: #87CEEB;
+  --sky-200: #a8ddf3;
+  --text: #0f172a;
+  --muted: #334155;
+  --white: #ffffff;
+  --card: #f8fbff;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--sky);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { width: 100%; height: auto; display: block; }
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover { background: rgba(15,23,42,0.06); color: var(--text); }
+.nav-links a.active { color: var(--text); background: rgba(15,23,42,0.08); }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 56px 0 28px;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 10px;
+}
+.hero .tagline {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.btn.primary {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.btn.primary:hover { filter: brightness(1.05); }
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+  margin: 18px 0 42px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15,23,42,0.18); }
+
+.card .card-body { padding: 14px 16px 16px; }
+.card h3 { margin: 6px 0 8px; font-size: 18px; }
+.card p { margin: 0; color: var(--muted); }
+
+/* Sidebar */
+.sidebar .card { padding-bottom: 8px; }
+.sidebar h3 { margin: 14px 16px 8px; }
+.sidebar .popular ul { list-style: none; padding: 0 16px 16px; margin: 0; }
+.sidebar .popular li { margin: 8px 0; }
+.sidebar .popular a { color: var(--text); text-decoration: none; }
+.sidebar .popular a:hover { text-decoration: underline; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 16px 16px; }
+.chip {
+  background: var(--white);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Page header (Achievements) */
+.page-header { text-align: center; padding: 48px 0 12px; }
+.page-header h1 { margin: 0 0 8px; font-size: clamp(26px, 4.6vw, 40px); }
+.page-header .tagline { color: var(--muted); margin: 0; }
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 24px 0 46px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255,255,255,0.7);
+}
+.footer .container { padding: 18px 0; text-align: center; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-grid { grid-template-columns: 1fr; }
+  .sidebar { order: -1; }
+}
+
+@media (max-width: 760px) {
+  .nav-content { padding: 12px 0; }
+  .nav-links a { margin-left: 12px; }
+  .posts { grid-template-columns: 1fr; }
+  .achievements-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .achievements-grid { grid-template-columns: 1fr; }
+}
